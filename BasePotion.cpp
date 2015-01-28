@@ -2,13 +2,8 @@
 #include "BasePotion.h"
 
 
-BasePotion::BasePotion()
-{
-}
+BasePotion::BasePotion(){}
 
-void BasePotion::Consume()
-{
-
-}
+void BasePotion::Consume(){}
 
 BasePotion::~BasePotion(){}

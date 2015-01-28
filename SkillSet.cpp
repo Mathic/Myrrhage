@@ -1,7 +1,6 @@
 #include "stdafx.h"
 #include "SkillSet.h"
 
-
 SkillSet::SkillSet()
 {
 	m_Agility = new Agility();

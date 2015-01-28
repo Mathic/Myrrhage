@@ -87,16 +87,20 @@
     <ClInclude Include="BaseEntity.h" />
     <ClInclude Include="BaseItem.h" />
     <ClInclude Include="BasePotion.h" />
+    <ClInclude Include="BaseSkill.h" />
     <ClInclude Include="BaseWeapon.h" />
+    <ClInclude Include="BodyArmor.h" />
     <ClInclude Include="Constitution.h" />
     <ClInclude Include="Dexterity.h" />
     <ClInclude Include="enums.h" />
     <ClInclude Include="Equipment.h" />
+    <ClInclude Include="FeetArmor.h" />
+    <ClInclude Include="HandArmor.h" />
+    <ClInclude Include="HeadArmor.h" />
     <ClInclude Include="Hero.h" />
-    <ClInclude Include="IEquippable.h" />
     <ClInclude Include="Intelligence.h" />
     <ClInclude Include="Inventory.h" />
-    <ClInclude Include="IUsable.h" />
+    <ClInclude Include="LegArmor.h" />
     <ClInclude Include="MyForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
@@ -113,15 +117,19 @@
     <ClCompile Include="BaseEntity.cpp" />
     <ClCompile Include="BaseItem.cpp" />
     <ClCompile Include="BasePotion.cpp" />
+    <ClCompile Include="BaseSkill.cpp" />
     <ClCompile Include="BaseWeapon.cpp" />
+    <ClCompile Include="BodyArmor.cpp" />
     <ClCompile Include="Constitution.cpp" />
     <ClCompile Include="Dexterity.cpp" />
     <ClCompile Include="Equipment.cpp" />
+    <ClCompile Include="FeetArmor.cpp" />
+    <ClCompile Include="HandArmor.cpp" />
+    <ClCompile Include="HeadArmor.cpp" />
     <ClCompile Include="Hero.cpp" />
-    <ClCompile Include="IEquippable.cpp" />
     <ClCompile Include="Intelligence.cpp" />
     <ClCompile Include="Inventory.cpp" />
-    <ClCompile Include="IUsable.cpp" />
+    <ClCompile Include="LegArmor.cpp" />
     <ClCompile Include="MyForm.cpp">
       <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</CompileAsManaged>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">

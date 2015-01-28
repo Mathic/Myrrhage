@@ -1,13 +1,15 @@
 #pragma once
 #include "BaseItem.h"
-#include "IEquippable.h"
 
 class BaseArmor :
-	public BaseItem, public IEquippable
+	public BaseItem
 {
 public:
 	BaseArmor();
-	virtual void Equip();
+	BaseArmor(string, int, MyrrhageEnums::ArmorType, MyrrhageEnums::ClassType);
+	BaseArmor(string, int, vector<BaseAttribute>, MyrrhageEnums::ArmorType, MyrrhageEnums::ClassType);
+	virtual void Equip() = 0;
+	virtual void Print();
 	~BaseArmor();
 protected:
 	MyrrhageEnums::ArmorType m_ArmorType;

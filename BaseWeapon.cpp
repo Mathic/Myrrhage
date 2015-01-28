@@ -1,14 +1,8 @@
 #include "stdafx.h"
 #include "BaseWeapon.h"
 
+BaseWeapon::BaseWeapon(){}
 
-BaseWeapon::BaseWeapon()
-{
-}
-
-void BaseWeapon::Equip()
-{
-
-}
+void BaseWeapon::Equip(){}
 
 BaseWeapon::~BaseWeapon(){}

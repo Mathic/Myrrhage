@@ -5,31 +5,26 @@
 BaseItem::BaseItem()
 	: BaseEntity(){}
 
-BaseItem::BaseItem(string name, int id, BaseAttribute* attr, MyrrhageEnums::ItemType iType)
+BaseItem::BaseItem(string name, int id, MyrrhageEnums::ItemType iType)
 	: BaseEntity(name, id)
 {
-	m_BaseAttribute = attr;
+	BaseAttribute attrs[] = { BaseAttribute(MyrrhageEnums::AGI), BaseAttribute(MyrrhageEnums::CON) };
+	m_Attributes.assign(attrs, attrs + sizeof(attrs) / sizeof(BaseAttribute));
 	m_ItemType = iType;
 }
 
-BaseItem::BaseItem(string name, int id, MyrrhageEnums::AttributeType aType, MyrrhageEnums::ItemType iType)
+BaseItem::BaseItem(string name, int id, vector<BaseAttribute> attr, MyrrhageEnums::ItemType iType)
 	: BaseEntity(name, id)
 {
-	m_BaseAttribute = new BaseAttribute(aType);
-	m_ItemType = iType;
-}
-
-BaseItem::BaseItem(string name, int id, MyrrhageEnums::AttributeType aType, int val, MyrrhageEnums::ItemType iType)
-	: BaseEntity(name, id)
-{
-	m_BaseAttribute = new BaseAttribute(aType, val);
+	m_Attributes = attr;
 	m_ItemType = iType;
 }
 
 void BaseItem::Print() const
 {
+	BaseEntity::Print();
 	string item = "Item Type: ";
-	m_BaseAttribute->Print();
+	
 	switch (m_ItemType)
 	{
 	case MyrrhageEnums::WEAPON:
@@ -45,6 +40,10 @@ void BaseItem::Print() const
 		break;
 	}
 	cout << item << endl;
+	for (std::vector<BaseAttribute>::size_type i = 0; i != m_Attributes.size(); i++)
+	{
+		m_Attributes[i].Print();
+	}
 }
 
 BaseItem::~BaseItem(){}

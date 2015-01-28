@@ -3,6 +3,7 @@
 #include "Inventory.h"
 #include "Equipment.h"
 #include "SkillSet.h"
+#include "enums.h"
 
 class Hero : 
 	public BaseCharacter
@@ -10,12 +11,17 @@ class Hero :
 public:
 	Hero();
 	Hero(string);
+	void SetName(string);
+	string GetName();
+	void SetClass(MyrrhageEnums::ClassType);
+	MyrrhageEnums::ClassType GetClass();
 	void Print();
 	~Hero();
 private:
 	string m_Name;
-	Inventory m_Inventory;
-	Equipment m_Equipment;
+	MyrrhageEnums::ClassType m_Class;
+	Inventory* m_Inventory;
+	Equipment* m_Equipment;
 	SkillSet* m_Skills;
 };
 

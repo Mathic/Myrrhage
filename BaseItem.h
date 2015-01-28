@@ -1,4 +1,5 @@
 #pragma once
+#include <vector>
 #include "BaseAttribute.h"
 #include "BaseEntity.h"
 
@@ -7,12 +8,11 @@ class BaseItem :
 {
 public:
 	BaseItem();
-	BaseItem(string, int, BaseAttribute*, MyrrhageEnums::ItemType);
-	BaseItem(string, int, MyrrhageEnums::AttributeType, MyrrhageEnums::ItemType);
-	BaseItem(string, int, MyrrhageEnums::AttributeType, int, MyrrhageEnums::ItemType);
+	BaseItem(string, int, MyrrhageEnums::ItemType);
+	BaseItem(string, int, vector<BaseAttribute>, MyrrhageEnums::ItemType);
 	virtual void Print() const;
 	~BaseItem();
 protected:
-	BaseAttribute* m_BaseAttribute;
+	vector<BaseAttribute> m_Attributes;
 	MyrrhageEnums::ItemType m_ItemType;
 };
