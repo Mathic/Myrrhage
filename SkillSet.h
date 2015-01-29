@@ -1,7 +1,7 @@
 #pragma once
 #include <vector>
 #include "BaseArmor.h"
-#include "Agility.h"
+#include "Charisma.h"
 #include "Constitution.h"
 #include "Dexterity.h"
 #include "Intelligence.h"
@@ -17,7 +17,7 @@ public:
 	void Unequip(BaseArmor*);
 	void Print();
 private:
-	Agility* m_Agility;
+	Charisma* m_Charisma;
 	Constitution* m_Constitution;
 	Dexterity* m_Dexterity;
 	Intelligence* m_Intelligence;

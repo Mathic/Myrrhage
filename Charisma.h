@@ -1,12 +1,12 @@
 #pragma once
 #include "BaseAttribute.h"
-class Agility :
+class Charisma :
 	public BaseAttribute
 {
 public:
-	Agility();
-	Agility(int);
+	Charisma();
+	Charisma(int);
 	virtual void Print() const;
-	~Agility();
+	~Charisma();
 };
 

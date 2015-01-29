@@ -8,7 +8,7 @@ BaseItem::BaseItem()
 BaseItem::BaseItem(string name, int id, MyrrhageEnums::ItemType iType)
 	: BaseEntity(name, id)
 {
-	BaseAttribute attrs[] = { BaseAttribute(MyrrhageEnums::AGI), BaseAttribute(MyrrhageEnums::CON) };
+	BaseAttribute attrs[] = { BaseAttribute(MyrrhageEnums::CHA), BaseAttribute(MyrrhageEnums::CON) };
 	m_Attributes.assign(attrs, attrs + sizeof(attrs) / sizeof(BaseAttribute));
 	m_ItemType = iType;
 }

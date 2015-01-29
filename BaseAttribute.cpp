@@ -35,7 +35,7 @@ void BaseAttribute::Print() const
 {
 	switch (m_Attribute)
 	{
-	case MyrrhageEnums::AGI:
+	case MyrrhageEnums::CHA:
 		cout << "Agility: ";
 		break;
 	case MyrrhageEnums::CON:

@@ -3,7 +3,7 @@
 
 SkillSet::SkillSet()
 {
-	m_Agility = new Agility();
+	m_Charisma = new Charisma();
 	m_Constitution = new Constitution();
 	m_Dexterity = new Dexterity();
 	m_Intelligence = new Intelligence();
@@ -12,7 +12,7 @@ SkillSet::SkillSet()
 
 SkillSet::SkillSet(int a, int c, int d, int i, int s)
 {
-	m_Agility = new Agility(a);
+	m_Charisma = new Charisma(a);
 	m_Constitution = new Constitution(c);
 	m_Dexterity = new Dexterity(d);
 	m_Intelligence = new Intelligence(i);
@@ -26,8 +26,8 @@ void SkillSet::Equip(BaseArmor* armor)
 	{
 		switch (attr[i].GetType())
 		{
-		case MyrrhageEnums::AGI:
-			m_Agility->SetValue(m_Agility->GetValue() + attr[i].GetValue());
+		case MyrrhageEnums::CHA:
+			m_Charisma->SetValue(m_Charisma->GetValue() + attr[i].GetValue());
 			break;
 		case MyrrhageEnums::CON:
 			m_Constitution->SetValue(m_Constitution->GetValue() + attr[i].GetValue());
@@ -52,8 +52,8 @@ void SkillSet::Unequip(BaseArmor* armor)
 	{
 		switch (attr[i].GetType())
 		{
-		case MyrrhageEnums::AGI:
-			m_Agility->SetValue(m_Agility->GetValue() - attr[i].GetValue());
+		case MyrrhageEnums::CHA:
+			m_Charisma->SetValue(m_Charisma->GetValue() - attr[i].GetValue());
 			break;
 		case MyrrhageEnums::CON:
 			m_Constitution->SetValue(m_Constitution->GetValue() - attr[i].GetValue());
@@ -73,7 +73,7 @@ void SkillSet::Unequip(BaseArmor* armor)
 
 void SkillSet::Print()
 {
-	m_Agility->Print();
+	m_Charisma->Print();
 	m_Constitution->Print();
 	m_Dexterity->Print();
 	m_Intelligence->Print();

@@ -3,14 +3,10 @@
 
 #include "stdafx.h"
 #include "enums.h"
-#include "BaseEntity.h"
-#include "BaseAttribute.h"
-#include "BaseItem.h"
-#include "SkillSet.h"
 #include "Hero.h"
 #include "HeadArmor.h"
 
-#include "Agility.h"
+#include "Charisma.h"
 
 int _tmain(int argc, _TCHAR* argv[])
 {
