@@ -34,6 +34,8 @@ bool Equipment::Equip(BaseArmor* armor)
 			return true;
 		m_FeetArmor = (FeetArmor*)armor;
 		return false;
+	default:
+		return false;
 	}
 }
 

@@ -1,21 +1,37 @@
-﻿Build started 1/27/2015 11:39:56 PM.
-     1>Project "D:\Projects\GitHub\LearnCPP\Myrrhage\Myrrhage.vcxproj" on node 2 (Build target(s)).
+﻿Build started 1/28/2015 10:52:35 PM.
+     1>Project "D:\Projects\GitHub\LearnCPP\Myrrhage\Myrrhage.vcxproj" on node 3 (Rebuild target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\Myrrhage.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt BaseArmor.cpp BodyArmor.cpp Equipment.cpp FeetArmor.cpp HandArmor.cpp HeadArmor.cpp Hero.cpp LegArmor.cpp Myrrhage.cpp
-         Equipment.cpp
-         Generating Code...
-         Compiling...
+         C:\Program Files (x86)\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yc"stdafx.h" /Fp"Debug\Myrrhage.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt stdafx.cpp
+         stdafx.cpp
+         C:\Program Files (x86)\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\Myrrhage.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Agility.cpp BaseArmor.cpp BaseAttribute.cpp BaseCharacter.cpp BaseEntity.cpp BaseItem.cpp BasePotion.cpp BaseSkill.cpp BaseWeapon.cpp BodyArmor.cpp Constitution.cpp Dexterity.cpp Equipment.cpp FeetArmor.cpp HandArmor.cpp HeadArmor.cpp Hero.cpp Intelligence.cpp Inventory.cpp LegArmor.cpp Myrrhage.cpp SkillSet.cpp Strength.cpp
+         Strength.cpp
+         SkillSet.cpp
          Myrrhage.cpp
-     1>Myrrhage.cpp(17): warning C4244: 'argument' : conversion from 'time_t' to 'unsigned int', possible loss of data
-         Hero.cpp
-         Generating Code...
-         Skipping... (no relevant changes detected)
          LegArmor.cpp
+         Inventory.cpp
+         Intelligence.cpp
+         Hero.cpp
          HeadArmor.cpp
          HandArmor.cpp
          FeetArmor.cpp
+         Equipment.cpp
+         Dexterity.cpp
+         Constitution.cpp
          BodyArmor.cpp
+         BaseWeapon.cpp
+         BaseSkill.cpp
+         BasePotion.cpp
+         BaseItem.cpp
+         BaseEntity.cpp
+         BaseCharacter.cpp
+         Generating Code...
+         Compiling...
+         BaseAttribute.cpp
          BaseArmor.cpp
+         Agility.cpp
+         Generating Code...
+         C:\Program Files (x86)\VC\bin\CL.exe /c /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0" /AI"C:\Program Files (x86)\Windows Kits\8.1\References\CommonConfiguration\Neutral" /Zi /clr /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm- /EHa /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\mscorlib.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Data.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Drawing.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Windows.Forms.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Xml.dll" /analyze- /errorReport:prompt /clr:nostdlib MyForm.cpp
+         MyForm.cpp
        Link:
          C:\Program Files (x86)\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\Projects\GitHub\LearnCPP\Debug\Myrrhage.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\Projects\GitHub\LearnCPP\Debug\Myrrhage.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\Projects\GitHub\LearnCPP\Debug\Myrrhage.lib" /MACHINE:X86 Debug\Agility.obj
          Debug\BaseArmor.obj
@@ -43,8 +59,8 @@
          Debug\stdafx.obj
          Debug\Strength.obj
          Myrrhage.vcxproj -> D:\Projects\GitHub\LearnCPP\Debug\Myrrhage.exe
-     1>Done Building Project "D:\Projects\GitHub\LearnCPP\Myrrhage\Myrrhage.vcxproj" (Build target(s)).
+     1>Done Building Project "D:\Projects\GitHub\LearnCPP\Myrrhage\Myrrhage.vcxproj" (Rebuild target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:00.54
+Time Elapsed 00:00:01.73

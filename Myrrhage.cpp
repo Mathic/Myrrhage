@@ -14,7 +14,7 @@
 
 int _tmain(int argc, _TCHAR* argv[])
 {
-	srand(time(NULL));
+	srand((unsigned int)time(NULL));
 	Hero* hero = new Hero("Riza");
 	hero->Print();
 	cout << endl;
