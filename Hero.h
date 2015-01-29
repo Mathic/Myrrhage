@@ -1,5 +1,6 @@
 #pragma once
 #include "BaseCharacter.h"
+#include "BaseArmor.h"
 #include "Inventory.h"
 #include "Equipment.h"
 #include "SkillSet.h"
@@ -15,6 +16,8 @@ public:
 	string GetName();
 	void SetClass(MyrrhageEnums::ClassType);
 	MyrrhageEnums::ClassType GetClass();
+	void Equip(BaseArmor*);
+	void Unequip(BaseArmor*);
 	void Print();
 	~Hero();
 private:

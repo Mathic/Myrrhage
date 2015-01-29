@@ -3,16 +3,16 @@
 
 Hero::Hero()
 {
+	m_Equipment = new Equipment();
 	m_Skills = new SkillSet();
-	m_Skills->Print();
 }
 
 Hero::Hero(string name)
 {
 	m_Name = name;
+	m_Equipment = new Equipment();
 	m_Skills = new SkillSet();
-	cout << m_Name << endl;
-	m_Skills->Print();
+	m_Class = MyrrhageEnums::HACKER;
 }
 
 void Hero::SetName(string name)
@@ -35,9 +35,35 @@ MyrrhageEnums::ClassType Hero::GetClass()
 	return m_Class;
 }
 
+void Hero::Equip(BaseArmor* armor)
+{
+	if (armor->GetClass() != this->m_Class)
+	{
+		std::cout << "You cannot wear this." << endl;
+		return;
+	}
+	std::cout << "Equipping ";
+
+	if (m_Equipment->Equip(armor))
+	{
+		Unequip(armor);
+		m_Equipment->Equip(armor);
+	}
+	m_Skills->Equip(armor);
+}
+
+void Hero::Unequip(BaseArmor* armor)
+{
+	std::cout << "Unequipping ";
+
+	m_Equipment->Unequip(armor);
+	m_Skills->Unequip(armor);
+}
+
 void Hero::Print()
 {
-	
+	std::cout << m_Name << endl;
+	m_Skills->Print();
 }
 
 Hero::~Hero(){}

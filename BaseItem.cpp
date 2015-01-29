@@ -20,6 +20,11 @@ BaseItem::BaseItem(string name, int id, vector<BaseAttribute> attr, MyrrhageEnum
 	m_ItemType = iType;
 }
 
+vector<BaseAttribute> BaseItem::GetAttributes()
+{
+	return m_Attributes;
+}
+
 void BaseItem::Print() const
 {
 	BaseEntity::Print();

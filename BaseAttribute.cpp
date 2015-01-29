@@ -7,7 +7,7 @@ BaseAttribute::BaseAttribute(){}
 BaseAttribute::BaseAttribute(MyrrhageEnums::AttributeType attr)
 {
 	m_Attribute = attr;
-	m_Value = rand() % 100;
+	m_Value = rand() % 10;
 }
 
 BaseAttribute::BaseAttribute(MyrrhageEnums::AttributeType attr, int val)
@@ -24,6 +24,11 @@ int BaseAttribute::GetValue()
 void BaseAttribute::SetValue(int value)
 {
 	m_Value = value;
+}
+
+MyrrhageEnums::AttributeType BaseAttribute::GetType()
+{
+	return m_Attribute;
 }
 
 void BaseAttribute::Print() const

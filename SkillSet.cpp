@@ -19,6 +19,58 @@ SkillSet::SkillSet(int a, int c, int d, int i, int s)
 	m_Strength = new Strength(s);
 }
 
+void SkillSet::Equip(BaseArmor* armor)
+{
+	vector<BaseAttribute> attr = armor->GetAttributes();
+	for (std::vector<BaseAttribute>::size_type i = 0; i != attr.size(); i++)
+	{
+		switch (attr[i].GetType())
+		{
+		case MyrrhageEnums::AGI:
+			m_Agility->SetValue(m_Agility->GetValue() + attr[i].GetValue());
+			break;
+		case MyrrhageEnums::CON:
+			m_Constitution->SetValue(m_Constitution->GetValue() + attr[i].GetValue());
+			break;
+		case MyrrhageEnums::DEX:
+			m_Dexterity->SetValue(m_Dexterity->GetValue() + attr[i].GetValue());
+			break;
+		case MyrrhageEnums::INT:
+			m_Intelligence->SetValue(m_Intelligence->GetValue() + attr[i].GetValue());
+			break;
+		case MyrrhageEnums::STR:
+			m_Strength->SetValue(m_Strength->GetValue() + attr[i].GetValue());
+			break;
+		}
+	}
+}
+
+void SkillSet::Unequip(BaseArmor* armor)
+{
+	vector<BaseAttribute> attr = armor->GetAttributes();
+	for (std::vector<BaseAttribute>::size_type i = 0; i != attr.size(); i++)
+	{
+		switch (attr[i].GetType())
+		{
+		case MyrrhageEnums::AGI:
+			m_Agility->SetValue(m_Agility->GetValue() - attr[i].GetValue());
+			break;
+		case MyrrhageEnums::CON:
+			m_Constitution->SetValue(m_Constitution->GetValue() - attr[i].GetValue());
+			break;
+		case MyrrhageEnums::DEX:
+			m_Dexterity->SetValue(m_Dexterity->GetValue() - attr[i].GetValue());
+			break;
+		case MyrrhageEnums::INT:
+			m_Intelligence->SetValue(m_Intelligence->GetValue() - attr[i].GetValue());
+			break;
+		case MyrrhageEnums::STR:
+			m_Strength->SetValue(m_Strength->GetValue() - attr[i].GetValue());
+			break;
+		}
+	}
+}
+
 void SkillSet::Print()
 {
 	m_Agility->Print();
