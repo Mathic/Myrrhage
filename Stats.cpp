@@ -1,7 +1,7 @@
 #include "stdafx.h"
-#include "SkillSet.h"
+#include "Stats.h"
 
-SkillSet::SkillSet()
+Stats::Stats()
 {
 	m_Charisma = new Charisma();
 	m_Constitution = new Constitution();
@@ -10,7 +10,7 @@ SkillSet::SkillSet()
 	m_Strength = new Strength();
 }
 
-SkillSet::SkillSet(int a, int c, int d, int i, int s)
+Stats::Stats(int a, int c, int d, int i, int s)
 {
 	m_Charisma = new Charisma(a);
 	m_Constitution = new Constitution(c);
@@ -19,7 +19,7 @@ SkillSet::SkillSet(int a, int c, int d, int i, int s)
 	m_Strength = new Strength(s);
 }
 
-void SkillSet::Equip(BaseArmor* armor)
+void Stats::ApplyStatModifier(BaseArmor* armor)
 {
 	vector<BaseAttribute> attr = armor->GetAttributes();
 	for (std::vector<BaseAttribute>::size_type i = 0; i != attr.size(); i++)
@@ -45,7 +45,7 @@ void SkillSet::Equip(BaseArmor* armor)
 	}
 }
 
-void SkillSet::Unequip(BaseArmor* armor)
+void Stats::RemoveStatModifier(BaseArmor* armor)
 {
 	vector<BaseAttribute> attr = armor->GetAttributes();
 	for (std::vector<BaseAttribute>::size_type i = 0; i != attr.size(); i++)
@@ -71,7 +71,7 @@ void SkillSet::Unequip(BaseArmor* armor)
 	}
 }
 
-void SkillSet::Print()
+void Stats::Print()
 {
 	m_Charisma->Print();
 	m_Constitution->Print();
@@ -80,4 +80,4 @@ void SkillSet::Print()
 	m_Strength->Print();
 }
 
-SkillSet::~SkillSet(){}
+Stats::~Stats(){}

@@ -11,9 +11,4 @@ HeadArmor::HeadArmor(std::string name, int id, MyrrhageEnums::ClassType classTyp
 HeadArmor::HeadArmor(std::string name, int id, vector<BaseAttribute> attrs, MyrrhageEnums::ClassType classType)
 	: BaseArmor(name, id, attrs, MyrrhageEnums::HEAD, classType){}
 
-void HeadArmor::Equip()
-{
-	
-}
-
 HeadArmor::~HeadArmor(){}

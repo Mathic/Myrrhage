@@ -4,14 +4,14 @@
 Hero::Hero()
 {
 	m_Equipment = new Equipment();
-	m_Skills = new SkillSet();
+	m_Skills = new Stats();
 }
 
 Hero::Hero(string name)
 {
 	m_Name = name;
 	m_Equipment = new Equipment();
-	m_Skills = new SkillSet();
+	m_Skills = new Stats();
 	m_Class = MyrrhageEnums::HACKER;
 }
 
@@ -49,7 +49,7 @@ void Hero::Equip(BaseArmor* armor)
 		Unequip(armor);
 		m_Equipment->Equip(armor);
 	}
-	m_Skills->Equip(armor);
+	m_Skills->ApplyStatModifier(armor);
 }
 
 void Hero::Unequip(BaseArmor* armor)
@@ -57,7 +57,7 @@ void Hero::Unequip(BaseArmor* armor)
 	std::cout << "Unequipping ";
 
 	m_Equipment->Unequip(armor);
-	m_Skills->Unequip(armor);
+	m_Skills->RemoveStatModifier(armor);
 }
 
 void Hero::Print()

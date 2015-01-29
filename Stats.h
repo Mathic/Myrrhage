@@ -7,14 +7,14 @@
 #include "Intelligence.h"
 #include "Strength.h"
 
-class SkillSet
+class Stats
 {
 public:
-	SkillSet();
-	SkillSet(int, int, int, int, int);
-	~SkillSet();
-	void Equip(BaseArmor*);
-	void Unequip(BaseArmor*);
+	Stats();
+	Stats(int, int, int, int, int);
+	~Stats();
+	void ApplyStatModifier(BaseArmor*);
+	void RemoveStatModifier(BaseArmor*);
 	void Print();
 private:
 	Charisma* m_Charisma;

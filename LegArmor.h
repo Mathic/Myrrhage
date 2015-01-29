@@ -7,7 +7,6 @@ public:
 	LegArmor();
 	LegArmor(std::string, int, MyrrhageEnums::ClassType);
 	LegArmor(std::string, int, vector<BaseAttribute>, MyrrhageEnums::ClassType);
-	virtual void Equip();
 	~LegArmor();
 };
 
