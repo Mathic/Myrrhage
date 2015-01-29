@@ -8,7 +8,7 @@ BaseItem::BaseItem()
 BaseItem::BaseItem(string name, int id, MyrrhageEnums::ItemType iType)
 	: BaseEntity(name, id)
 {
-	BaseAttribute attrs[] = { BaseAttribute(MyrrhageEnums::AGI), BaseAttribute(MyrrhageEnums::CON) };
+	BaseAttribute attrs[] = { BaseAttribute(MyrrhageEnums::CHA), BaseAttribute(MyrrhageEnums::CON) };
 	m_Attributes.assign(attrs, attrs + sizeof(attrs) / sizeof(BaseAttribute));
 	m_ItemType = iType;
 }
@@ -18,6 +18,11 @@ BaseItem::BaseItem(string name, int id, vector<BaseAttribute> attr, MyrrhageEnum
 {
 	m_Attributes = attr;
 	m_ItemType = iType;
+}
+
+vector<BaseAttribute> BaseItem::GetAttributes()
+{
+	return m_Attributes;
 }
 
 void BaseItem::Print() const

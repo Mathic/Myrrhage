@@ -9,6 +9,4 @@ FeetArmor::FeetArmor(std::string name, int id, MyrrhageEnums::ClassType classTyp
 FeetArmor::FeetArmor(std::string name, int id, vector<BaseAttribute> attrs, MyrrhageEnums::ClassType classType)
 	: BaseArmor(name, id, attrs, MyrrhageEnums::FEET, classType){}
 
-void FeetArmor::Equip(){}
-
 FeetArmor::~FeetArmor(){}

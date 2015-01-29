@@ -19,6 +19,16 @@ BaseArmor::BaseArmor(string name, int id, vector<BaseAttribute> attrs, MyrrhageE
 
 void BaseArmor::Equip(){}
 
+MyrrhageEnums::ClassType BaseArmor::GetClass()
+{
+	return m_ClassType;
+}
+
+MyrrhageEnums::ArmorType BaseArmor::GetType()
+{
+	return m_ArmorType;
+}
+
 void BaseArmor::Print()
 {
 	BaseItem::Print();

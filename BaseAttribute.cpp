@@ -7,7 +7,7 @@ BaseAttribute::BaseAttribute(){}
 BaseAttribute::BaseAttribute(MyrrhageEnums::AttributeType attr)
 {
 	m_Attribute = attr;
-	m_Value = rand() % 100;
+	m_Value = rand() % 10;
 }
 
 BaseAttribute::BaseAttribute(MyrrhageEnums::AttributeType attr, int val)
@@ -26,11 +26,16 @@ void BaseAttribute::SetValue(int value)
 	m_Value = value;
 }
 
+MyrrhageEnums::AttributeType BaseAttribute::GetType()
+{
+	return m_Attribute;
+}
+
 void BaseAttribute::Print() const
 {
 	switch (m_Attribute)
 	{
-	case MyrrhageEnums::AGI:
+	case MyrrhageEnums::CHA:
 		cout << "Agility: ";
 		break;
 	case MyrrhageEnums::CON:

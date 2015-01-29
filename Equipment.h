@@ -11,11 +11,8 @@ class Equipment
 {
 public:
 	Equipment();
-	void EquipHeadArmor();
-	void EquipBodyArmor();
-	void EquipHandArmor();
-	void EquipLegArmor();
-	void EquipFeetArmor();
+	bool Equip(BaseArmor*);
+	void Unequip(BaseArmor*);
 	void CalculateEquipmentModifiers();
 	~Equipment();
 private:

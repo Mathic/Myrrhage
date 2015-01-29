@@ -3,32 +3,28 @@
 
 #include "stdafx.h"
 #include "enums.h"
-#include "BaseEntity.h"
-#include "BaseAttribute.h"
-#include "BaseItem.h"
-#include "SkillSet.h"
 #include "Hero.h"
 #include "HeadArmor.h"
 
-#include "Agility.h"
+#include "Charisma.h"
 
 int _tmain(int argc, _TCHAR* argv[])
 {
-	srand(time(NULL));
-	BaseEntity * ent;
-	BaseAttribute * att = new BaseAttribute(MyrrhageEnums::AGI);
-	cout << "Attribute" << endl;
-	att->Print();
-	cout << endl;
-	BaseItem * item = new BaseItem("not a test", 2, MyrrhageEnums::ARMOR);
-	ent = item;
-	ent->Print();
-	cout << endl;
+	srand((unsigned int)time(NULL));
 	Hero* hero = new Hero("Riza");
+	hero->Print();
 	cout << endl;
 	HeadArmor* helmet = new HeadArmor("Helmet", 123, MyrrhageEnums::HACKER);
 	helmet->Print();
-
+	cout << endl;
+	cout << "penis" << endl;
+	hero->Equip(helmet);
+	hero->Print();
+	cout << endl;
+	hero->Equip(helmet);
+	hero->Print();
 	cin.get();
+	delete hero;
+	delete helmet;
 	return 0;
 }

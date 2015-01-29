@@ -8,6 +8,6 @@ public:
 	virtual void Execute() = 0;
 protected:
 	MyrrhageEnums::ClassType m_ClassType;
-	BaseAttribute m_MinAttributeValues[];
+	//BaseAttribute m_MinAttributeValues[];
 };
 

@@ -10,6 +10,7 @@ public:
 	BaseItem();
 	BaseItem(string, int, MyrrhageEnums::ItemType);
 	BaseItem(string, int, vector<BaseAttribute>, MyrrhageEnums::ItemType);
+	vector<BaseAttribute> GetAttributes();
 	virtual void Print() const;
 	~BaseItem();
 protected:

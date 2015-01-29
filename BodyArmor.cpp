@@ -9,6 +9,4 @@ BodyArmor::BodyArmor(std::string name, int id, MyrrhageEnums::ClassType classTyp
 BodyArmor::BodyArmor(std::string name, int id, vector<BaseAttribute> attrs, MyrrhageEnums::ClassType classType)
 	: BaseArmor(name, id, attrs, MyrrhageEnums::BODY, classType){}
 
-void BodyArmor::Equip(){}
-
 BodyArmor::~BodyArmor(){}
