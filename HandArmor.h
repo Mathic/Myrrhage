@@ -1,12 +1,10 @@
 #pragma once
-#include "BaseArmor.h"
+#include "Armor.h"
 class HandArmor :
-	public BaseArmor
+	public Armor
 {
 public:
 	HandArmor();
-	HandArmor(std::string, int, MyrrhageEnums::ClassType);
-	HandArmor(std::string, int, vector<BaseAttribute>, MyrrhageEnums::ClassType);
 	~HandArmor();
 };
 

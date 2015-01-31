@@ -1,19 +1,8 @@
 #include "stdafx.h"
-#include "enums.h"
 #include "BaseAttribute.h"
 
-BaseAttribute::BaseAttribute(){}
-
-BaseAttribute::BaseAttribute(MyrrhageEnums::AttributeType attr)
+BaseAttribute::BaseAttribute()
 {
-	m_Attribute = attr;
-	m_Value = rand() % 10;
-}
-
-BaseAttribute::BaseAttribute(MyrrhageEnums::AttributeType attr, int val)
-{
-	m_Attribute = attr;
-	m_Value = val;
 }
 
 int BaseAttribute::GetValue()
@@ -31,27 +20,11 @@ MyrrhageEnums::AttributeType BaseAttribute::GetType()
 	return m_Attribute;
 }
 
-void BaseAttribute::Print() const
+void BaseAttribute::SetType(MyrrhageEnums::AttributeType type)
 {
-	switch (m_Attribute)
-	{
-	case MyrrhageEnums::CHA:
-		cout << "Agility: ";
-		break;
-	case MyrrhageEnums::CON:
-		cout << "Constitution: ";
-		break;
-	case MyrrhageEnums::DEX:
-		cout << "Dexterity: ";
-		break;
-	case MyrrhageEnums::INT:
-		cout << "Intelligence: ";
-		break;
-	case MyrrhageEnums::STR:
-		cout << "Strength: ";
-		break;
-	}
-	cout << m_Value << endl;
+	m_Attribute = type;
 }
 
-BaseAttribute::~BaseAttribute(){}
+BaseAttribute::~BaseAttribute()
+{
+}

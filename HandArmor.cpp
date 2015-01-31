@@ -1,12 +1,13 @@
 #include "stdafx.h"
 #include "HandArmor.h"
 
-HandArmor::HandArmor(){}
 
-HandArmor::HandArmor(std::string name, int id, MyrrhageEnums::ClassType classType)
-	: BaseArmor(name, id, MyrrhageEnums::HANDS, classType){}
+HandArmor::HandArmor()
+{
+	m_ArmorType = MyrrhageEnums::HANDS;
+}
 
-HandArmor::HandArmor(std::string name, int id, vector<BaseAttribute> attrs, MyrrhageEnums::ClassType classType)
-	: BaseArmor(name, id, attrs, MyrrhageEnums::HANDS, classType){}
 
-HandArmor::~HandArmor(){}
+HandArmor::~HandArmor()
+{
+}

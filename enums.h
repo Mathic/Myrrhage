@@ -1,12 +1,11 @@
-#ifndef MYRRHAGE_ENUMS_H
-#define MYRRHAGE_ENUMS_H
+#pragma once
+
 namespace MyrrhageEnums
 {
 	enum ClassType { INFANTRY, CYBORG, PSION, HACKER };
 	enum ItemType { WEAPON, ARMOR, POTION };
-	enum AttributeType { STR, INT, CON, DEX, CHA };
+	enum AttributeType { MHT, RES, AGI, KNO, PRS };
 	enum ArmorType { HEAD, BODY, LEGS, HANDS, FEET };
-	enum WeaponType { MELEE, RANGE };
+	enum WeaponType { ONE, TWO, SHIELD, THROW };
 	enum PotionType { HEALTH, ENERGY, SPEED, STRENGTH, AIM };
 }
-#endif MYRRHAGE_ENUMS_H

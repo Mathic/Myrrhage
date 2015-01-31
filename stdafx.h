@@ -7,10 +7,9 @@
 
 #include "targetver.h"
 
-#include <iostream>
 #include <stdio.h>
-#include <string>
 #include <tchar.h>
-#include <time.h>
+#include <iostream>
+#include <string>
 using namespace std;
-// TODO: reference additional headers your program requires here
+

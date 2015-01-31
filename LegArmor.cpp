@@ -1,12 +1,13 @@
 #include "stdafx.h"
 #include "LegArmor.h"
 
-LegArmor::LegArmor(){}
 
-LegArmor::LegArmor(std::string name, int id, MyrrhageEnums::ClassType classType)
-	: BaseArmor(name, id, MyrrhageEnums::LEGS, classType){}
+LegArmor::LegArmor()
+{
+	m_ArmorType = MyrrhageEnums::LEGS;
+}
 
-LegArmor::LegArmor(std::string name, int id, vector<BaseAttribute> attrs, MyrrhageEnums::ClassType classType)
-	: BaseArmor(name, id, attrs, MyrrhageEnums::LEGS, classType){}
 
-LegArmor::~LegArmor(){}
+LegArmor::~LegArmor()
+{
+}
