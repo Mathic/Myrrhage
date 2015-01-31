@@ -9,6 +9,8 @@ class BaseEquipment :
 {
 public:
 	BaseEquipment();
+	std::vector<BaseAttribute> GetAttributes();
+	void Print();
 	~BaseEquipment();
 protected:
 	std::vector<BaseAttribute> m_Attributes;
