@@ -3,7 +3,7 @@
 
 BaseAttribute::BaseAttribute()
 {
-	m_Value = rand() % 10;
+	m_Value = (rand() % 10)+1;
 }
 
 int BaseAttribute::GetValue()

@@ -10,13 +10,13 @@ Breastplate::Breastplate()
 	BaseAttribute c = BaseAttribute();
 
 	a.SetType(MyrrhageEnums::MHT);
-	a.SetValue(rand() % 10);
+	a.SetValue((rand() % 10)+1);
 
-	b.SetType(MyrrhageEnums::RES);
-	b.SetValue(rand() % 10);
-
-	c.SetType(MyrrhageEnums::PRS);
-	c.SetValue(rand() % 10);
+	b.SetType(MyrrhageEnums::PRS);
+	b.SetValue((rand() % 10) + 1); 
+	
+	c.SetType(MyrrhageEnums::RES);
+	c.SetValue((rand() % 10) + 1);
 
 	m_Attributes = { a, b, c };
 }
